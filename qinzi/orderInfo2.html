@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=0">
+	<title>亲子网站</title>
+	<!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css" />
+	<link rel="stylesheet" href="css/public.css">
+    <style type="text/css">
+      
+       .behind {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .behind a.ui-btn {
+        width: 100px;
+        margin: 0px;
+        padding: 0;
+        float: right;
+        border: none;
+    }
+    .behind a.delete-btn, .behind a.delete-btn:active, .behind a.delete-btn:visited, .behind a.delete-btn:focus, .behind a.delete-btn:hover {
+        color: white;
+        background-color: red;
+        text-shadow: none;
+    }
+    .behind a.ui-btn.pull-left {
+        float: left;
+    }
+    .behind a.edit-btn, .behind a.edit-btn:active, .behind a.edit-btn:visited, .behind a.edit-btn:focus, .behind a.edit-btn:hover {
+        color: white;
+        background-color: orange;
+        text-shadow: none;
+    }
+      #main{background: #f7f7f7;}
+        header{background: #fff;}   
+        .nav p{font-size: 40px;color: #fe7e97;text-align: center;height: 88px;line-height: 88px;}
+        .nav {position: relative;}
+        .back{text-decoration: none;display: inline-block;position: absolute;top: 20px;left: 5%;}
+        .back img{height: 100%;}
+        .nav .add_people{
+            position: absolute;
+            top: 1.3rem;
+            left: 83%;
+            color: #ff8800;
+            font-size: 1.5rem;
+            background: url(images/tab_increase.png) no-repeat 0px center;
+            padding-left: 2.5rem;
+            height: 2rem;
+            line-height: 2rem;
+        }
+        .padLf{padding-left: 1.5rem}
+        
+        .orders_num p{
+            height: 5rem;
+            line-height: 5rem;
+            font-size: 1.5rem;
+            color: #737373;
+
+        }
+        .orders_num p span{
+            color: #ed2f2f;
+        }
+        .order_footer {
+            height: 5rem;
+            line-height: 5rem;
+            position: fixed;
+            bottom:0; left:0;width:100%;
+        }
+        .order_footer a{
+            display: inline-block;
+            text-align: center;
+             width: 100%;
+             height: 100%;
+             background: #FF8800;
+             color: #fff;
+             font-size: 1.8rem;
+             font-weight: normal;
+        }
+        .ui-btn-icon-right:after{
+            display: block;
+            content: "";clear: both;
+            background: none;
+        }
+        .ui-listview>li,.ui-page-theme-a .ui-btn{
+            height: 6rem;
+            line-height: 6rem;
+            background: #fff;
+            font-size: 1.5rem;
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 0;
+        }
+        .ui-listview>li h4{
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            font-size: 1rem;
+            margin: 0;
+            position: relative;
+        }
+        .ui-listview>li ul {
+            position: absolute;
+            width: 68%;
+            left: 13%;
+            top: 18%;
+            height: 6rem;
+            line-height: 2rem;
+            color: #ababab;
+            font-size: 1.2rem;
+            font-weight: normal;
+        }
+        .ui-listview>li ul li:nth-child(1){
+            display: -webkit-flex;
+        }
+        .ui-listview>li ul li:nth-child(1) em{
+            text-align: center;
+            font-size: 1.5rem;
+            color: #595959;
+            width: 5rem;
+        }
+        .ui-listview>li ul li:nth-child(1) i{
+            flex: 1;
+        }
+        .ui-listview>li ul li:nth-child(2){
+            display: -webkit-flex;
+        }
+         .ui-listview>li ul li:nth-child(2) em{
+            font-size: 1.5rem;
+            color: #595959;
+            flex: 1;
+
+        }
+        .ui-listview>li ul li:nth-child(2) i{
+            width: 5rem;
+            text-align: center;
+        }
+        .btn_nochoose {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            width: 3rem;
+            height: 3rem;
+            background: url(images/btn_nochoose.png) no-repeat center center;
+        }
+         .btn_nochoose.active{
+            background: url(images/btn_choose.png) no-repeat center center;
+         }
+    </style>
+	
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <div id="main">
+        <header>
+          <div class="nav">
+           <a href="javascript:history.back(-1)" class="back"><img src="images/back.png"></a>
+            <p>选择出行人</p>
+            <a class="add_people" href="addpeople.html">新增</a>
+          </div>
+        </header>
+        
+        <div class="orders_num">
+            <p class="padLf ">请选择成人<span>2</span>名,儿童<span>2</span>名 </p>
+        </div>
+        <div class="order_list">
+                <ul data-role="listview" class="swipe-delete">
+                    <li>
+                        <div class="behind">
+                            <a href="#" class="ui-btn delete-btn">删除</a>
+                            <a href="#" class="ui-btn edit-btn pull-left">编辑</a>
+                        </div>
+                        <a href="#">
+                            <h4><img src="images/icon_list_people.png">
+                            <ul>
+                                <li>
+                                    <em>陈雨欣</em>&nbsp;&nbsp;<i>身份证</i>
+                                </li>
+                                <li>
+                                    <i>女</i>&nbsp;&nbsp;<em>10101521268215645457</em>
+                                </li>
+                            </ul>
+                                <i href="#" class="btn_nochoose active"></i>
+                            </h4>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="behind">
+                            <a href="#" class="ui-btn delete-btn">删除</a>
+                            <a href="#" class="ui-btn edit-btn pull-left">编辑</a>
+                        </div>
+                        <a href="#">
+                            <h4><img src="images/icon_list_people.png">
+                            <ul>
+                               <li>
+                                    <em>王虎</em>&nbsp;&nbsp;<i>身份证</i>
+                                </li>
+                                <li>
+                                    <i>男</i>&nbsp;&nbsp;<em>10101521268215645457</em>
+                                </li>
+                            </ul>
+                                <i href="#" class="btn_nochoose"></i>
+                            </h4>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+        <div class="mt140"></div>
+     </div>
+    <div class="order_footer">
+        <a href="#">提交</a>
+    </div>
+    
+	<script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+     <script src="js/jquery.mobile-1.4.3.min.js"></script>
+<script type="text/javascript">
+$(function() {
+
+    function prevent_default(e) {
+        e.preventDefault();
+    }
+
+    function disable_scroll() {
+        $(document).on('touchmove', prevent_default);
+    }
+
+    function enable_scroll() {
+        $(document).unbind('touchmove', prevent_default)
+    }
+
+    var x;
+    $('.swipe-delete li > a')
+        .on('touchstart', function(e) {
+            console.log(e.originalEvent.pageX)
+            $('.swipe-delete li > a.open').css('left', '0px').removeClass('open') // close em all
+            $(e.currentTarget).addClass('open')
+            x = e.originalEvent.targetTouches[0].pageX // anchor point
+        })
+        .on('touchmove', function(e) {
+            var change = e.originalEvent.targetTouches[0].pageX - x
+            change = Math.min(Math.max(-100, change), 100) // restrict to -100px left, 0px right
+            e.currentTarget.style.left = change + 'px'
+            if (change < -10) disable_scroll() // disable scroll once we hit 10px horizontal slide
+        })
+        .on('touchend', function(e) {
+            var left = parseInt(e.currentTarget.style.left)
+            var new_left;
+            if (left < -35) {
+                new_left = '-100px'
+            } else if (left > 35) {
+                new_left = '100px'
+            } else {
+                new_left = '0px'
+            }
+            // e.currentTarget.style.left = new_left
+            $(e.currentTarget).animate({left: new_left}, 200)
+            enable_scroll()
+        });
+
+    $('li .delete-btn').on('touchend', function(e) {
+        e.preventDefault()
+        $(this).parents('li').slideUp('fast', function() {
+            $(this).remove()
+        })
+    })
+
+    $('li .edit-btn').on('touchend', function(e) {
+        e.preventDefault()
+        $(this).parents('li').children('a').html('edited')
+    })
+
+});
+$(".btn_nochoose").on("tap",function(){
+    $(this).toggleClass("active");
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<title>亲子网站</title>
+	<!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">   
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/css.css">  
+   <style type="text/css">
+   #main{background: #fafafa;}
+    .asment{height: 4rem;padding: 0.5rem 0.75rem;background: #fff;} 
+    .asment h4{font-size: 0.75rem;color: #333;}
+    .asment h5{ text-align: right;color: #808080; margin-top: 0.5rem;font-size: 0.6rem;}
+    .pingjia{padding: 0 0.75rem;font-size: 0.9rem;position: relative;} .pingjia p{color: #595959;}
+    .pingjialist{background: #fff;border-top: 1px solid #808080;}
+    .pingjialist ul li {font-size: 0.75rem;color: #808080;height: 1.75rem;line-height: 1.75rem;}
+    .pingjialist ul li i{font-size: 0.75rem;}
+    .pingjialist ul li span{
+        display: inline-block;
+        width: 4rem;
+        color: #595959;
+    }
+    .pad30{padding: 0 0.75rem;}
+    .pingfen {display: -webkit-flex;padding-top: 0.5rem;}
+    .pingfen span{width: 2.75rem;}
+    .pingfen ul{ position: absolute;top: 15px;left: 3.5rem; overflow: hidden;width: 5.65rem;height:0.85rem; background: url(images/star1.png) no-repeat -5.55rem 0px; }
+    .pingfen ul li{ float:left;width: 22.5px;text-indent: -9999px;}
+    .pingjia textarea{
+      padding:0.5rem;
+      margin-top: 0.5rem;
+      width: 100%;
+      height: 7.5rem;
+      font-size: 0.75rem;
+      border-radius: 0.5rem;
+    }
+    .asment_submit{
+      width: 100%;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      text-align: right;
+    }
+    .asment_submit a{
+      display: inline-block;
+      width: 4.5rem;
+      height:1.5rem;
+      text-align: center;
+      line-height: 1.5rem;
+      font-size: 0.75rem;
+      color: #595959;
+      border-radius: .25rem;
+      border: 1px solid #808080;
+      }
+      .asment_submit a.tijiao{
+        border: none;
+        background: #18d1f9;
+        color: #fff;
+        margin-left: 0.5rem;
+      }
+   </style>
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    
+    <div id="main">
+          <div class="detail_nav">
+            <a href="javascript:history.back(-1)" class="back"><img src="images/back-1.png"></a>
+          </div>
+        <!-- 轮播图 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img style="width:100%" src="images/banner6.png" alt="">
+                </div>
+                 <div class="swiper-slide">
+                  <img style="width:100%" src="images/banner6.png" alt="">
+                </div>
+               <div class="swiper-slide">
+                  <img style="width:100%" src="images/banner6.png" alt="">
+                </div>
+            </div>
+        </div>
+       <div class="asment">
+            <h4 class="title">[零距离完美假期]人文北京时代的记忆三天两夜家庭游感受祖国的厚重</h4>
+            <h5>活动已结束 </h5>
+       </div>
+       <div class="pingjialist">
+        <ul class="pad30">
+             <li><span>套餐名称:</span><i>国庆亲子游</i></li>
+             <li><span>活动地址:</span><i>北京市及周边地市风景区</i></li>
+             <li><span>下单时间:</span><i>2016/09/25</i></li>
+             <li><span>订单编号:</span><i>6224545123354421</i></li>
+          </ul>
+        </div>
+       <div class="pingjia">
+         <div class="pingfen">
+            <span>评分：</span>
+           <ul class="star" id="star">
+            <li><a href="javascript:void(0)" title="1" class="one-star">1</a></li>
+            <li><a href="javascript:void(0)" title="2" class="two-stars">2</a></li>
+            <li><a href="javascript:void(0)" title="3" class="three-stars">3</a></li>
+            <li><a href="javascript:void(0)" title="4" class="four-stars">4</a></li>
+            <li><a href="javascript:void(0)" title="5" class="five-stars">5</a></li>
+          </ul>
+        </div>
+        <div>
+          <textarea placeholder="留下你的旅行感受吧！"></textarea> 
+        </div>
+       </div>
+        
+      </div>
+      <div class="mt140"></div>
+     </div>
+    <footer>
+      <div class="asment_submit pad30"> <a href="javascript:history.back(-1)">取消</a><a href="user.html" class="tijiao">提交评价</a></div>
+    </footer>
+    
+	
+  <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+   <script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+         loop: true,
+        pagination: '.swiper-pagination',
+        autoplay: 3000,//可选选项，自动滑动
+        autoplayDisableOnInteraction : false,
+      })     
+    $('#star li').click(function(){
+    //获得当前点击的是哪个心形
+    var i = $('#star li').index(this);
+    var ip=-110+(i+1)*23;
+    //小于i的.heart改变背景颜色
+    $('.star li:lt('+(i+1)+')').parent().css('background-position',ip+'px');
+  }); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+header{height:2.3rem;max-width: 100%;background: #FFD7DF;overflow: hidden;}
+.nav{margin: 0.4rem .75rem;}
+.nav:after{display: block;content: "";clear: both;}
+.area:visited{color: #fff;}
+#city-picker {
+	float: left;
+	width: 2.75rem;
+	height: 1.5rem;
+	font-size: .8rem;
+	background: #ff7f99;
+	border-radius: 5px;
+	border: none;			
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.picker-items{
+    font-size:16px;
+    color:#323232;
+}
+.picker-modal{
+    background:#fff !important;
+    height:250px !important;
+}
+.button-link{
+    color:#323232 !important;
+}
+.col-province{
+    width:50% !important;
+}
+.col-city{
+    width:50% !important;
+}
+.col-district{
+    display:none;
+}
+::-webkit-input-placeholder { /* WebKit browsers */ 
+color: #fff; 
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+color: #fff; 
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+color: #fff; 
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+color: #fff; 
+} 
+
+.search{
+	width: 10rem;
+	float: left;
+	padding: 0.2rem;
+	height: 1.5rem;
+	margin-left: 1.5rem;
+	font-size: 1.8rem;
+	border-radius: 1rem;
+	box-sizing: border-box;
+	color: #ababab;
+	background: #FFBFCC;
+	position: relative;
+}
+#index_search_keyword{   
+	position: absolute;
+	top: 6px;
+	left: 1.1rem;
+	 white-space: nowrap;
+	 box-sizing: border-box;
+	 border: none;
+	 border-radius: 20px;
+	 width: 8rem;
+	 background: #FFBFCC;
+	line-height: 1rem;
+	 height: 1rem;
+	 font-size: .7rem;
+}
+.search span{
+	position: absolute;
+	top: 6px;
+	right: .75rem;
+	width: .7rem;
+	height: 1rem;
+	background:url(../images/search.png) no-repeat center center;
+	background-size: 100%;
+}
+.login{float: right;width: 1.5rem;}
+
+/*********
+	main  主体
+********/
+
+
+/*分类*/
+.fenlei{
+	width: 100%;
+	height: 8rem;
+	padding: 0.8rem 0.5rem 0;
+	border-color: #fff;
+}
+.fenlei ul {overflow: hidden;height: 8rem;}
+.fenlei ul li{
+	float: left;
+	width: 25%;
+	text-align: center;
+	margin-bottom:.5rem;
+    padding: 0 4px;
+}
+ul:after{display: block; clear: both;content: "";}
+.fenlei ul li a {
+    display: block;
+    width: 50px;
+    height: 65px;
+    margin: 0 auto;
+}
+.fenlei1 ul li a img{
+	max-width: 100% !important;
+    display: block;
+}
+.Hot{position: relative;}
+.Hot span{ position: absolute;top: 0;right: 10px;width: 1.2rem;height: 1.2rem;
+	background: url(../images/icon_hot@2x_2	.png) no-repeat center center;
+	background-size: 100%;
+	/*line-height: 2rem;*/
+}
+.fenlei2{
+	width: 100%;
+	height: 5rem;
+	padding: 0.7rem  0.75rem;
+	border-color: #fff;
+}
+.fenlei2 ul li{
+	float: left;
+	width: 50%;
+	padding-left: 0.3rem;
+	height: 5rem;
+}
+
+.fenlei2 ul li a {
+	float: left;
+    display: block;
+	width: 100%;
+
+}
+.fenlei2 ul li a img{
+	float: left;
+	width: 35%;
+	margin-right: 0.2rem;
+}
+
+.fenlei2 ul li a div{
+	float: left;
+	width: 60%;
+	text-align: left;
+}
+.fenlei2 ul li a div h4{
+	color: #ff7f7f;
+	font-size: .7rem;
+	margin-bottom: .5rem;
+}
+.fenlei2 ul li a div p{
+	display: block;
+	height: 1.5rem;
+	color: #888;
+	font-size: .5rem;
+}
+.pad15{padding: 0 0.75rem;}
+
+/*广播*/
+.toutiao{
+    background: #fff;
+    height: 1.7rem;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    position: relative;
+}
+.toutiao h4 {
+    font-size: 0.8rem;
+    position: absolute;
+    color: #ff7f99;
+    top: 50%;
+    left:15px;
+     -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.swiper-container1{
+	position: absolute;top: 26%;right:15px;
+    height: 1rem;overflow: hidden;font-size: 0.6rem;color: #666;
+}
+.swiper-container2{
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem 0rem;
+    padding-left: 0.5rem;
+}
+
+ .swiper-container2 p{
+ 	font-size: .6rem;
+	margin-top: 10px;
+	 white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+}
+ .swiper-container2 .swiper-button-next, .swiper-button-prev{
+ 	height: 22px;
+ }
+.swiper-container2 p span{
+	color: #ed2f2f;
+}
+#box .count li{
+	display: none;
+}
+/*游园会*/
+.zhuanti h4{
+	font-size: 0.9rem;
+	color: #333;
+	padding: 0 0.5rem;
+}
+.scenic_state img,.zhuanti img{
+	max-width: 100%;
+}
+.zhuanti ul,.zhuanti p{
+	font-size: 0.6rem;
+	color: #ababab;
+	padding: 0.5rem;
+}
+.zhuanti ul li{
+	width: 3.5rem;
+	height: 1.1rem;
+	margin-right: 0.7rem;
+	display: inline-block;
+	border: 1px solid #ff7f99;
+	color: #ff7f99;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 1.1rem;
+}
+
+.activity {
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+.activity .apply_number{
+	position: absolute;
+	top: 1.7rem;
+	left: 0;
+	font-size: 0.7rem;
+	background-color:rgba(0,0,0,0.6);
+	color:#fff; 
+	text-align: center;
+	border-top-right-radius:1rem;
+	border-bottom-right-radius:1rem;
+	width: 6rem;
+
+}
+.activity .apply_price{
+	position: absolute;
+	top: 7rem;
+	right: 0;
+	background-color:#cc4429;
+	color: #fff;
+	font-size: 0.75rem;
+}
+
+/*silide 拖动*/
+.scenic_state{
+	position: relative;
+}
+.scenic_state h4,.scenic_state h5,.scenic_state p{
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	top: 3.5rem;
+	left: 0;
+	color: #fff;
+	font-size: 1.5rem;
+}
+.scenic_state h5{
+	top: 6rem;
+	left: 0;
+	font-size: 1em;
+}
+.scenic_state p {
+	top: 8rem;
+	left: 0;
+}
+.scenic_state p a{
+	display: inline-block;
+	color: #fff;
+	font-size: 1rem; 
+	height: 2rem;
+	line-height: 2rem;
+	width: 5rem;
+	border:  2px solid #fff;
+	border-radius: 5px;
+
+}
+
+footer{
+	position: fixed;
+	 bottom:0; left:0;width:100%;
+	 background: #fff;
+	 z-index: 100;
+}
+footer ul{
+	display: -webkit-flex;
+	border-top: 1px solid #ededed;
+}
+footer ul li {
+	flex:1;
+	text-align: center;
+	height: 2.5rem;
+}
+
+footer ul li a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+footer ul li a img{max-width: 100%;max-height: 100%;}
+
+
+/*响应式的开发*/
+@media screen  and (max-width: 374px){
+	
+.search{
+	width: 9rem;
+	margin-left: 0.5rem;
+}
+.fenlei2 ul li a div h4 {
+    font-size: 0.6rem;
+}
+
+
+}

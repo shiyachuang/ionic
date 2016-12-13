@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<title>亲子网站</title>
+	<!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+	<link rel="stylesheet" href="css/public.css">
+    <style type="text/css">
+        #main{background: #f7f7f7;}
+        header{background: #fff;}   
+        .nav p{font-size: 20px;color: #fe7e97;text-align: center;height: 44px;line-height: 44px;}
+        .nav {position: relative;}
+        .back{max-width:16px;height: 22px;text-decoration: none;display: inline-block;position: absolute;top: 10px;left: 5%;}
+        .back img{height: 100%;}
+        .pad30{padding: 0 0.75rem;}
+         .nav .add_people{
+            position: absolute;
+            top: 0.65rem;
+            left: 83%;
+            color: #ff8800;
+            font-size: 0.75rem;
+            background: url(images/tab_increase.png) no-repeat 0px center;
+            background-size: 30%;
+            padding-left: 1.25rem;
+            height: 1rem;
+            line-height: 1rem;
+        }
+        .pad30{padding: 0 0.75rem;}
+        .swipe-delete{border-top: 1px solid #ddd;}
+       .swipe-delete>li{
+            background: #fff;
+            overflow: hidden;
+            height: 5rem;
+            border-bottom:  1px solid #ddd;
+        }
+        .swipe-delete>li>img{
+            float: left;
+            margin-top: 0.75rem;
+            width: 22px;
+        }
+        .swipe-delete>li>i {
+            float: right;
+            margin-top: 0.75rem;
+            margin-right: 1.25rem;
+        }
+        .swipe-delete>li ul{
+            margin-top: 0.6rem;
+            display: inline-block;
+            padding-left: 1rem;
+        }
+        .swipe-delete>li ul li{
+            font-size: 0.75rem;
+        }
+        .swipe-delete>li ul li em{
+            text-align: center;
+            display: inline-block;
+            width: 2.5rem;
+            margin-right: 1rem;
+        }
+        .swipe-delete_orderinfo em,.swipe-delete>li ul li i{
+            font-size:0.6rem;
+            color: #ababab; 
+        }
+        .swipe-delete>li ul .swipe-delete_orderinfo i{
+            font-size:0.75rem;
+            color: #595959; 
+        }
+         .swipe-delete>li p{
+          overflow: hidden;
+          margin-top: 0.5rem;
+         }
+         .swipe-delete>li p a{
+          float: right;
+          width:4.5rem;
+          height: 1.5rem;
+          font-size: 0.75rem;color: #fff;
+          background: #18d1f9;
+          text-align: center;
+          line-height: 1.5rem;
+          border-radius: 0.5rem;
+         }
+         .swipe-delete>li p .delete{
+          margin-right: 0.75rem;
+          border: 1px solid #595959;
+          color: #595959;
+          background: #fff;         }
+    </style>
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div id="main">
+<header>
+  <div class="nav">
+   <a href="javascript:history.back(-1)" class="back"><img src="images/back.png"></a>
+    <p>常用联系人</p>
+    <a class="add_people" href="addpeople.html">新增</a>
+  </div>
+</header>
+  <div class="order_list">
+                <ul class="swipe-delete">
+                    <li class="pad30 ">
+                            <img src="images/icon_list_people.png">
+                            <ul>
+                                <li>
+                                    <em>陈雨欣</em>&nbsp;&nbsp;<i>身份证</i>
+                                </li>
+                                <li class="swipe-delete_orderinfo">
+                                    <em>女</em>&nbsp;&nbsp;<i>10101521268215645457</i>
+                                </li>
+                            </ul>
+                            <p><a href="changePeople.html" class="change">编辑</a><a href="#" class="delete">删除</a></p>
+                        </a>
+                    </li>
+                    <li class="pad30 ">
+                            <img src="images/icon_list_people.png">
+                            <ul>
+                                <li>
+                                    <em>陈雨欣</em>&nbsp;&nbsp;<i>身份证</i>
+                                </li>
+                                <li class="swipe-delete_orderinfo">
+                                    <em>女</em>&nbsp;&nbsp;<i>10101521268215645457</i>
+                                </li>
+                            </ul>
+                         <p><a href="changePeople.html" class="change">编辑</a><a href="#" class="delete">删除</a></p>
+                      </li>
+                </ul>
+        </div>
+</div>
+ <footer>
+        <ul>
+          <li ><a href="index.html"><img src="images/footer/home.png"></a></li>
+            <li ><a href="rili.html"><img src="images/footer/calendaer.png"></a></li>
+            <li ><a href="message.html"><img src="images/footer/message.png"></a></li>
+            <li ><a href="kid.html"><img src="images/footer/baby.png"></a></li>
+            <li ><a href="user.html"><img src="images/footer/user.png"></a></li>
+        </ul>
+    </footer>
+
+<script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+  
+</script>
+</body>
+</html>

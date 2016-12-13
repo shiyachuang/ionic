@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<title>亲子网站</title>
+	<!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+	<link rel="stylesheet" href="css/public.css">
+    <style type="text/css">
+        #main{background: #f7f7f7;}
+        header{background: #fff;}   
+        .nav p{font-size: 20px;color: #fe7e97;text-align: center;height: 44px;line-height: 44px;}
+        .nav {position: relative;}
+        .back{max-width:16px;height: 22px;text-decoration: none;display: inline-block;position: absolute;top: 10px;left: 5%;}
+        .back img{height: 100%;}
+         .pad30{padding: 0 0.75rem;}
+         .kid-info{height: 5rem; overflow: hidden; display: -webkit-flex;}
+         .kid-info .lf{position: relative;align-self:center;}
+         .kid-info .lf img{width: 70px;height: 70px;}
+         .kid-info .rt{flex: 1;align-self:center;font-size: 15px;margin-left: 1rem; color: #595959;}
+         .kid-info .rt p i ,.kid-info .rt p b{display: inline-block; width: 65px;border-bottom: 1px dotted #808080;margin-right: 20px;font-size: 14px; line-height: 28px;
+            text-align: center;
+            color: #808080;}
+          .kid-info .rt p i{margin-right: 0px;}
+        
+         #school b{width: 150px;}
+         .rongyu{height: 1.5rem; line-height: 1.5rem; background: #18D1F9;font-size: 18px; color: #fff;}
+         .rongyu img{width: 18px;margin-right: 10px;}
+         .rongyu_detail p{font-size:15px;color: #595959; background: #fff; overflow: hidden;height: 1.8rem; line-height: 1.8rem; }
+         .rongyu_detail p a{color:#167be0; }
+         .rongyu_detail li{height: 50px;font-size: 18px; line-height: 50px;border-bottom: 2px solid #fff;}
+          .rongyu_detail li a{color: #ff8800; display: block; width: 100%;height: 100%;}
+            .rongyu_detail li a img{
+                width: 40px;margin-right: 15px;
+            }
+            .rongyu_detail li a i{float: right; width: 9px;}
+             .kid-info  .baocun{color: #167be0; }
+    </style>
+	
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <div id="main">
+        <header>
+          <div class="nav">
+           <a href="javascript:history.back(-1)" class="back"><img src="images/back.png"></a>
+            <p>成长档案</p>
+          </div>
+        </header>
+        <div class="kid ">
+            <div class="banner">
+                <img src="images/bg_grow_up_banner@2x.png">
+            </div>
+            <div class="kid-info pad30">
+                <div class="lf"><img src="images/fenlei-r.png"></div>
+                <div class="rt">    
+                    <!-- <form>
+                        <label for="name">姓名:</label>
+                        <input type="text" name="name" id="name" placeholder="小白兔">
+                         <label for="sex">性别:</label>
+                        <input type="radio" name="sex" value="男" checked="">男
+                       <input type="radio" name="sex" value="女"> 女
+                         <label for="school" >学校:</label>
+                        <input type="text" placeholder="北京市第四中学" name="school" id="school">
+                    </form> -->
+                    <p>姓名:<b>白古风</b>性别: <i>男</i></p>
+                    <p id="school">学校:<b>郑州市第一小学</b></p>
+
+                     <a href="kid.html" class="rt baocun">修改</a>
+                </div>
+            </div>
+            <div class="rongyu pad30">
+                <img src="images/icon_honor_grow_up@2x.png">我的荣誉
+            </div>
+            <div class="rongyu_detail "> 
+                <p class="pad30">童军级别：预备童军</p>
+                <p class="pad30">徽章个数：2个 <a href="honor.html" class="rt">了解详情</a></p>
+                <ul >
+                    <li class="pad30">
+                        <a href="kid-grow.html"><img src="images/icon_badges_of_honor_1@2x.png"><b>千岛湖荒岛生存夏令营</b><i><img src="images/right1.png"></i></a>
+                    </li>
+                    <li class="pad30">
+                        <a href="kid-grow.html"><img src="images/icon_badges_of_honor_1@2x.png"><b>奔跑吧少年夏令营</b><i><img src="images/right1.png"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </div>
+    <footer>
+        <ul>
+           <li ><a href="index.html"><img src="images/footer/home.png"></a></li>
+            <li ><a href="rili.html"><img src="images/footer/calendaer.png"></a></li>
+            <li ><a href="message.html"><img src="images/footer/message.png"></a></li>
+            <li ><a href="kid.html"><img src="images/footer/baby_active.png"></a></li>
+            <li ><a href="user.html"><img src="images/footer/user.png"></a></li>
+        </ul>
+    </footer>
+    
+	<script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+   
+    </script>
+</body>
+</html>

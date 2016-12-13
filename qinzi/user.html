@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<title>亲子网站</title>
+	<!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/user.css">  
+	
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <div id="main">
+        <div class="user">
+            <p class="exit"><a href="#">退出</a></p>
+            <p class="user_img"><span><img src="images/fenlei-r.png"></span></p>
+            <h3><span>行走的童军</span><img src="images/modify.png"></h3>
+            <div class="changePwd">
+                <p>修改昵称 &nbsp;<input type="text" name="" minlength="2" maxlength="6" required="required"></p>
+                <h5></h5>
+                <button class="submit">确定</button><button class="cancel">取消</button>    
+            </div>
+        </div>  
+        <div class="user_orders">
+            <a href="no-payment.html">
+                <img src="images/nopaying.png"><br>
+                待付款订单<i>12</i>  
+            </a>
+            <a href="no-trip.html">
+                <img src="images/notravel.png"><br>
+                未出行订单<i>12</i>  
+            </a>
+            <a href="Assessmen.html">
+                <img src="images/noevaluate.png"><br>
+                待评价订单<i>12</i>  
+            </a>
+            <a href="finsh-Assessment.html">
+                <img src="images/done.png"><br>
+                已完成订单<i>12</i>  
+            </a>
+        </div>
+        <div class="mt20"></div>   
+         <div class="user_fenlei">
+             <ul>
+                 <li><a href="collect.html"><img src="images/collection.png">我的收藏<i></i></a></li>
+                 <li><a href="message.html"><img src="images/message-my.png">我的消息<i></i></a></li>
+                 <li class="jifen"><a href="#integral"><img src="images/integral.png">我的积分<i></i></a></li>
+                  <li id="integral"><a href="#">积分： <span>500</span></a></li>
+                 <li><a href="OfterPeople.html"><img src="images/used.png">常用出行人<i></i></a></li>
+                 <li class="medal"><a href="#"><img src="images/trophy.png">荣誉勋章<i></i>
+                    <div >
+                       <span> <img src="images/Badge1.png"></span>
+                       <span> <img src="images/Badge2.png"></span>
+                       <span> <img src="images/Badge3.png"></span>
+                       <span> <img src="images/Badge4.png"></span>
+                       <span> <img src="images/Badge1.png"></span>
+                       <span> <img src="images/Badge2.png"></span>
+                       <span> <img src="images/Badge3.png"></span>
+                        <span> <img src="images/Badge1.png"></span>
+                       <span> <img src="images/Badge2.png"></span>
+                       <span> <img src="images/Badge4.png"></span>
+                    </div>
+                 </a></li>
+                  <li><a href="aboutUs.html"><img src="images/attention.png">关于零距离</a></li>
+             </ul>
+         </div>   
+        <div class="mt140"></div>
+        <div class="pwdMask "></div>
+     </div>
+    <footer>
+        <ul>
+           <li ><a href="index.html"><img src="images/footer/home.png"></a></li>
+            <li ><a href="rili.html"><img src="images/footer/calendaer.png"></a></li>
+            <li ><a href="message.html"><img src="images/footer/message.png"></a></li>
+            <li ><a href="kid.html"><img src="images/footer/baby.png"></a></li>
+            <li ><a href="user.html"><img src="images/footer/user_active.png"></a></li>
+        </ul>
+        </ul>
+    </footer>
+    <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+       $(".user h3").click(function(){
+            $(".pwdMask").fadeIn(500);
+            $(".changePwd").fadeIn(500);
+            $(".submit").click(function(){
+                var a=$(".changePwd input").val();
+                if (a=="") {
+                    $(".changePwd h5").html("*用户名不能为空");
+                }else{
+                $(".user h3 span").html(a);
+                $(".pwdMask").fadeOut(500);
+                $(".changePwd").fadeOut(500);
+           } })
+             $(".changePwd h5").html("");
+            $(".changePwd input").val("");
+            $(".cancel").click(function(){
+                $(".pwdMask").fadeOut(500);
+                $(".changePwd").fadeOut(500);
+            })
+
+       })
+       $(".jifen a").click(function(e){
+            e.preventDefault();
+           $($(this).attr("href")).slideToggle(500);
+       })
+       $(" .medal div span:gt(3)").css("display","none");
+        $(".medal>a").click(function(e){
+            e.preventDefault();
+             $(" .medal div span:gt(3)").fadeToggle(500);            
+        })
+    </script>
+</body>
+</html>

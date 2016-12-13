@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<title>亲子网站</title>
+	<!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
+     <link href="css/mobiscroll.custom-2.16.1.min.css" rel="stylesheet" type="text/css" />
+
+<script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+    <script src="js/mobiscroll.custom-2.16.1.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/public.css">
+    <style type="text/css">
+        header{background: #fff;}
+
+        .nav p{font-size: 20px;color: #fe7e97;text-align: center;height: 44px;line-height: 44px;}
+        .nav {position: relative;}
+        .back{text-decoration: none;display: inline-block;position: absolute;top: 10px;
+            left: 5%;width:15px;height: 22px; }
+        .back img{height: 100%;}
+        
+        .padLf{padding-left: 1.5rem}
+        .addpeople form table{
+            width: 100%;
+        }
+        .addpeople form table tr{
+            height: 2.5rem;
+            line-height: 2.5rem;
+            font-size: 0.75rem;
+            display: -webkit-flex;
+        }
+        .addpeople form table tr td:first-child{
+            width: 5.35rem;
+            text-align: left;
+            color: #595959;
+            padding-left: 15px;
+        }
+        .addpeople form table tr td:nth-child(2){
+            flex: 1;
+            line-height: 1.2rem;
+        }
+        .addpeople form table tr td input{
+            font-size: 0.75rem;
+            border: none;
+            height: 30px;
+            margin-top: 10px;
+        }
+        .addpeople form table tr td select{
+            width: 100%;
+            font-size:0.75rem;
+            border: none;
+            margin-top: 10px;
+             height: 30px;
+        }
+        #date{
+            border: none;
+        }
+        .order_footer {
+            position: fixed;
+             bottom:0; left:0;width:100%;
+             background: #fff;
+
+        }
+        .order_footer ul{
+            display: -webkit-flex;
+        }
+        .order_footer ul li{
+            text-align: center;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            background: #ff8800;
+            width: 100%;
+        }
+        .order_footer ul li a{
+            display: block;
+            width: 100%;
+            height: 100%;
+              color: #fff;
+            font-size: 0.8rem;
+        }
+        .mbsc-bootstrap .dw-li{
+            font-size: 16px;
+        }
+    </style>
+	
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+    <script>
+        $(function () {
+
+            function init() {
+                
+                // Select demo initialization
+                $('#demo_select').mobiscroll().select({
+                    theme: theme,     // Specify theme like: theme: 'ios' or omit setting to use default 
+                    mode: mode,       // Specify scroller mode like: mode: 'mixed' or omit setting to use default 
+                    display: display, // Specify display mode like: display: 'bottom' or omit setting to use default 
+                    lang: lang        // Specify language like: lang: 'pl' or omit setting to use default 
+                });
+                
+                // Date demo initialization
+                $('#demo_date').mobiscroll().date({
+                    theme: theme,     // Specify theme like: theme: 'ios' or omit setting to use default 
+                    mode: mode,       // Specify scroller mode like: mode: 'mixed' or omit setting to use default 
+                    display: display, // Specify display mode like: display: 'bottom' or omit setting to use default 
+                    lang: lang        // Specify language like: lang: 'pl' or omit setting to use default 
+                });
+                
+              
+               
+                // Forms demo initialization
+                $('#demo_form').mobiscroll().form({
+                    theme: theme,     // Specify theme like: theme: 'ios' or omit setting to use default 
+                    mode: mode,       // Specify scroller mode like: mode: 'mixed' or omit setting to use default 
+                    display: display, // Specify display mode like: display: 'bottom' or omit setting to use default 
+                    lang: lang        // Specify language like: lang: 'pl' or omit setting to use default 
+                });
+                
+            }    
+
+            // -------------------------------------------------------------------
+            // Demo page code START, you can ignore this in your implementation
+            var demo, theme, mode, display, lang;
+          
+                theme = "bootstrap",
+                lang = "zh";
+                $("#demo_cont_" + demo).show();
+                init();
+        });
+    </script>
+</head>
+<body>
+<div id="main">
+    <header>
+      <div class="nav">
+       <a href="javascript:history.back(-1)" class="back"><img src="images/back.png"></a>
+        <p>添加出行人</p>
+      </div>
+    </header>
+    <div class="mt20"></div>
+    <div class="addpeople">
+       <form enctype="multipart/form-data" action="ashx/login.ashx" method="post">
+            <table>
+                <tr>
+                    <td><label for="txtname">出行人姓名</label></td>
+                    <td><input type="text" id="txtname" name="login_username" placeholder="请输入您的姓名" /></td>
+                </tr>
+                <tr>
+                    <td><label for="sex">性别</label></td>
+                    <td>
+                        <div data-role="fieldcontain" class="demo-cont" id="demo_cont_select">
+                            <select name="性别" id="demo_select" data-role="none">
+                                <option value="0">请选择性别</option>
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select>   
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="date">出生日期</label></td>
+                    <td>
+                      <!-- Date demo markup -->
+                         <div data-role="fieldcontain" class="demo-cont" id="demo_cont_date">
+                                <input type="text" id="demo_date" placeholder="请选择你的出生日期" />  
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="paper">证件类型</label></td>
+                    <td>
+                            <select name="证件" >
+                                <option value="0">请选择证件</option>
+                                <option value="1">身份证</option>
+                                <option value="2">军官证</option>
+                            </select>   
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="papernumber">证件号码</label></td>
+                    <td><input type="text" id="" name="login_pswd"  placeholder="请输入证件号码"/></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="mt140"></div>
+ </div>
+<div class="order_footer">
+    <ul>
+        <li ><a href="orderInfo.html">保存</a></li>
+    </ul>
+</div>
+
+<script>
+   
+</script>
+</body>
+</html>

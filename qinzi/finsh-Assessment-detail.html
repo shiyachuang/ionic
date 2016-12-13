@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<title>亲子网站</title>
+	<!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">   
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/css.css">  
+   <style type="text/css">
+   #main{background: #fafafa;height: 1100px;}
+     .asment{height: 4rem;padding: 0.5rem 0.75rem;background: #fff;} 
+     .asment h4{font-size: 0.75rem;color: #333;}
+     .asment h5{ text-align: right;color: #808080; margin-top: 0.5rem;font-size: 0.6rem;}
+      .pingjia{padding: 0 0.75rem;font-size: 0.9rem;} .pingjia p{color: #595959;}
+      .pingjia h5{font-size: 0.9rem;height: 1.5rem;line-height: 1.5rem;margin-top: 1rem;margin-bottom: 0.75rem;position: relative;}
+      .pingjia h5 i{position: absolute;top: 7px;left: 2.5rem; width: 5.6rem;height:0.85rem; background: url(images/star1.png) no-repeat -45px 0px;}
+   </style>
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    
+    <div id="main">
+          <div class="detail_nav">
+            <a href="javascript:history.back(-1)" class="back"><img src="images/back-1.png"></a>
+          </div>
+        <!-- 轮播图 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img style="width:100%" src="images/banner6.png" alt="">
+                </div>
+                 <div class="swiper-slide">
+                  <img style="width:100%" src="images/banner6.png" alt="">
+                </div>
+               <div class="swiper-slide">
+                  <img style="width:100%" src="images/banner6.png" alt="">
+                </div>
+            </div>
+        </div>
+       <div class="asment">
+            <h4 class="title">[零距离完美假期]人文北京时代的记忆三天两夜家庭游感受祖国的厚重</h4>
+            <h5>活动已结束 </h5>
+       </div>
+       <div class="pingjia">
+         <h5>评分：<i></i> </h5>
+         <p>&nbsp;&nbsp;&nbsp;
+           当我踏进故宫的第一感觉就是宏伟，突然感觉自己特别渺小。我们去的那天是晴天，感觉天特别高，时不时有鸟从天上飞过，那感觉真是太好了。
+         </p>
+       </div>
+     
+      </div>
+      <div class="mt140"></div>
+     </div>
+  
+    
+	
+  <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+   <script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+         loop: true,
+        pagination: '.swiper-pagination',
+        autoplay: 3000,//可选选项，自动滑动
+        autoplayDisableOnInteraction : false,
+      })        
+    </script>
+</body>
+</html>

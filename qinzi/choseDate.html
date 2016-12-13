@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport">     
+<meta content="yes" name="apple-mobile-web-app-capable">     
+<meta content="black" name="apple-mobile-web-app-status-bar-style">     
+<meta content="telephone=no" name="format-detection">
+
+<title>亲子网站</title>
+<link href="css/datepicker1.css" rel="stylesheet" />
+<script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+<script src="js/zlDate1.js"></script>
+<style type="text/css">
+*{margin:0;padding:0px;list-style: none;}
+</style>
+<script>
+function AjaxTime(){	
+	$.get("date1.php",function(data) {			
+		pickerEvent.setPriceArr(eval("("+data+")"));
+		pickerEvent.Init("calendar");
+	});
+}
+AjaxTime();
+</script>
+</head>
+
+<body>
+<header>
+	<div class="nav">
+		<a href="javascript:history.back(-1)" class="back"><img src="images/back.png"></a>
+		<p>选择日期</p>
+		<span><img src="images/mianbao.png"></span>
+	</div>
+</header>
+<!-- <center >
+<input type="text" id="calendar" name="calendar" readonly="readonly" onclick="AjaxTime();" placeholder="点击选择时间"/>
+
+</center> -->
+<div class="main">
+</div>
+<footer>
+	   <ul>
+          <li ><a href="index.html"><img src="images/footer/home.png"></a></li>
+            <li ><a href="rili.html"><img src="images/footer/calendaer.png"></a></li>
+            <li ><a href="message.html"><img src="images/footer/message.png"></a></li>
+            <li ><a href="kid.html"><img src="images/footer/baby.png"></a></li>
+            <li ><a href="user.html"><img src="images/footer/user.png"></a></li>
+        </ul>
+</footer>
+</body>
+</html>

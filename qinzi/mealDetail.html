@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<title>亲子网站</title>
+	<!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+	<link rel="stylesheet" href="css/public.css">
+    <style type="text/css">
+      #main{background: #f7f7f7;}
+        header{background: #fff;}   
+        .nav p{font-size: 20px;color: #fe7e97;text-align: center;height: 44px;line-height: 44px;}
+        .nav {position: relative;}
+        .back{max-width:16px;height: 22px;text-decoration: none;display: inline-block;position: absolute;top: 10px;left: 5%;}
+        .back img{height: 100%;}
+        .nav span{left: 90%}
+        .pad30{padding: 0 0.75rem;}
+        .meal_list{
+            padding-top: 1rem;
+        }
+        .meal_list ul li h4{
+            font-size: 0.9rem;
+            height: 2rem;
+            line-height: 2rem;
+            color: #fff;background: #19d1f9;
+        }
+         .meal_list ul li div{
+            background: url(images/bg_choose_package.png) no-repeat center center;
+            height: 8rem;
+            padding: 0.5rem 0.75rem;
+            position: relative;
+         }
+         .meal_list ul li div:after{
+            display: block;
+            content: "";clear: both;
+         }
+         
+         .meal_list ul li div h5{
+            height: 1.5rem;
+            line-height: 1.5rem;
+            font-size: 0.75rem;
+         }
+          .meal_list ul li div h5 span{
+            color: #333;
+            padding-left: 1.25rem;
+            background: url(images/icon_place_map@2x.png) no-repeat 0px center;
+            background-size: 20%;
+          }
+          .meal_list ul li div h5 span.rt{
+            background: url(images/icon_activity_time@2x.png) no-repeat 0px center;background-size: 12%;
+          }
+          .meal_list ul li div h5 span i{
+            margin-left: 0.25rem;
+            color: #ff8800;
+          }
+          .meal_list ul li div p{
+            font-size: 0.75rem;
+            color: #737373;
+            height: 4.25rem;
+            overflow: hidden;
+          }
+          .meal_list ul li div p span{
+            color: #333;
+          }
+          .meal_list ul li div em{
+            position: absolute;
+            bottom: 6px;
+            left: 0;
+            width: 100%;
+            font-size: 0.75rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            color: #ed2f2f;
+          }
+           .btn_nochoose {
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: url(images/btn_nochoose.png) no-repeat center center;
+            background-size: 100%;
+        }
+        .btn_nochoose.active{
+            background: url(images/btn_choose.png) no-repeat center center;
+            background-size: 100%;
+            
+         }
+    </style>
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div id="main">
+<header>
+  <div class="nav">
+   <a href="javascript:history.back(-1)" class="back"><img src="images/back.png"></a>
+    <p>选择套餐</p>
+  </div>
+</header>
+<div class="meal_list">
+    <ul>
+        <li>
+            <h4 class="pad30">秋假儿童专场</h4>
+            <div  class="pad30">
+                <h5><span class="lf">地点:<i>北京</i></span><span class="rt">活动时长:<i>3天2夜</i></span>  </h5>
+                <p><span>活动内容</span>：故宫、长城、颐和园、香山、管理天安门升国旗、活动内容：故宫、长城、颐和园、香山、管理天安门升国旗。活动内容：故宫、长城、颐和园、天安门升国旗.</p>
+                <em class="pad30">报名截止时间：<b>2016/11/12</b><i class="rt btn_nochoose "></i></em>
+            </div>
+        </li>
+         <li>
+            <h4 class="pad30">中秋优惠套餐</h4>
+            <div  class="pad30">
+                <h5><span class="lf">地点:<i>北京</i></span><span class="rt">活动时长:<i>3天2夜</i></span>  </h5>
+                <p><span>活动内容</span>：故宫、长城、颐和园、香山、管理天安门升国旗、活动内容：故宫、长城、颐和园、香山、管理天安门升国旗。活动内容：故宫、长城、颐和园、香山、管理天安门。</p>
+                <em class="pad30">报名截止时间：<b>2016/11/12</b><i class="rt btn_nochoose "></i></em>
+            </div>
+        </li>
+    </ul>
+</div>
+
+</div>
+<footer>
+    <ul>
+      <li ><a href="index.html"><img src="images/footer/home.png"></a></li>
+        <li ><a href="rili.html"><img src="images/footer/calendaer.png"></a></li>
+        <li ><a href="message.html"><img src="images/footer/message.png"></a></li>
+        <li ><a href="kid.html"><img src="images/footer/baby.png"></a></li>
+        <li ><a href="user.html"><img src="images/footer/user.png"></a></li>
+    </ul>
+</footer>
+<script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    $(".btn_nochoose").on("click",function(){
+     $(this).toggleClass("active");
+     self.location='choseDate.html'; 
+ });
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<title>亲子网站</title>
+	<!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+	<link rel="stylesheet" href="css/public.css">
+    <style type="text/css">
+      a:visited{color: #fff;}
+        #main{background: #f7f7f7;}
+         .login form{position: relative;}
+        .yzm{position: absolute;top: 3.3rem;right: 0px;border-top-right-radius: 0.75rem;
+          color: #FFF;border-bottom-right-radius: 0.75rem;
+         width: 5.25rem;background: #ea1c1c;height: 2.45rem;line-height: 2.45rem;  font-size:0.75rem}
+        .login .submit{padding-left:0;background-color:#38a8ef;color: #fff; }
+         header{background: #fff;}   
+        .nav p{font-size: 20px;color: #fe7e97;text-align: center;height: 44px;line-height: 44px;}
+        .nav {position: relative;}
+        .back{max-width:16px;height: 22px;text-decoration: none;display: inline-block;position: absolute;top: 10px;left: 5%;}
+        .back img{height: 100%;}
+        .pad30{padding: 0 0.75rem;}
+        .login  h4{display: block; font-size: 17px;font-weight: normal; position: relative; text-align: center;height: 4.5rem;line-height: 4.5rem;}
+        .login  h4 img{position: absolute; top: 37%;left: 22%;}
+        .login {width: 17.25rem;margin: 0 auto ;text-align: center;background: #f7f7f7;padding-bottom: 3.5rem;}
+        .login input{width: 100%;height: 2.5rem;border-radius: 0.75rem; border:none;margin-bottom: 0.75rem;font-size:0.9rem; padding-left: 1rem; }
+        #user_name,#password,#repassword{background-color: #fff;}
+        .login .submit{padding-left:0;background-color:#38a8ef;color: #fff; }
+    </style>
+
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <div id="main">
+        <header>
+          <div class="nav">
+          <a href="javascript:history.back(-1)" class="back"><img src="images/back.png"></a>
+            <p>找回密码</p>
+          </div>
+        </header>
+        <div class="login">
+            <h4></h4>
+            <form method = 'get' action="findNewPwd.html"onsubmit='return checkform()';>
+              <input type="text"  id="user_name" name='user_name' placeholder="手机号" maxlength="11" ><br>
+              <input type="text"  id="yzm" name='user_yzm' placeholder="请输入验证码" maxlength="6" ><a href="#" class="yzm">获取验证码</a><br>
+              <input type="submit" value="确定" class="submit">
+            </form>
+        </div>
+     </div>
+    <footer>
+        <ul>
+             <li ><a href="index.html"><img src="images/footer/home.png"></a></li>
+            <li ><a href="rili.html"><img src="images/footer/calendaer.png"></a></li>
+            <li ><a href="message.html"><img src="images/footer/message.png"></a></li>
+            <li ><a href="kid.html"><img src="images/footer/baby.png"></a></li>
+            <li ><a href="user.html"><img src="images/footer/user.png"></a></li>
+        </ul>
+    </footer>
+    <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+    // var strongRegex = new RegExp("/^[a-zA-Z0-9]{6,10}$/", "g");
+    function checkform(){
+    var yzm = $('#yzm').val();
+     if(yzm!="123456"){
+         $(".login h4").html("");
+        $(".login h4").html('<img src="images/erro.png"><span>验证码错误</span>');
+         return false;
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <title>亲子网站</title>
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="css/public.css">
+    <style type="text/css">
+         #main{background: #f7f7f7;}
+        header{background: #fff;}   
+        .nav p{font-size: 20px;color: #fe7e97;text-align: center;height: 44px;line-height: 44px;}
+        .nav {position: relative;}
+        .back{max-width:16px;height: 22px;text-decoration: none;display: inline-block;position: absolute;top: 10px;left: 5%;}
+        .back img{height: 100%;}
+        .pad30{padding: 0 0.75rem;}
+        .no-payment{border-top: 1px solid #808080;}
+        .no-payment-list{margin-bottom: 0.5rem;}
+        .list-title{
+            display: -webkit-flex;
+            height: 4.25rem;
+            background: #fff;
+            position: relative;
+        }
+        .list-title>img{
+            width: 3.5rem;
+            height: 3.5rem;
+            align-self: center;
+            margin-right: 0.5rem;
+        }
+        .list-title .description{
+            flex: 1;
+            margin-top: 0.75rem;
+            /*align-self: center;*/
+    }
+   .list-title .description h4{ 
+        width: 13.25rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        vertical-align: middle;  
+        font-size: 0.75rem;
+        color: #333;
+}
+    .list-title .description h5{
+         margin-top: 1.25rem;
+        font-size: 0.6rem;color: #808080;text-align: right;
+    }
+   
+    </style>
+    
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="main">
+        <header>
+          <div class="nav">
+           <a href="javascript:history.back(-1)" class="back"><img src="images/back.png"></a>
+            <p>儿童心理零距离</p>
+          </div>
+        </header>
+       <div class="no-payment">
+            <div class="no-payment-list">
+               <div class="list-title pad30">
+                   <img src="images/bg_list_panda.png">
+                   <div class="description">
+                     <h4>父母，孩子人生路上的第一站明灯 父母，孩子人生路上的第一站明灯</h4>
+                    <h5>发布日期：2016/09/27</h5>   
+                   </div>
+                </div>
+           </div>
+            <div class="no-payment-list">
+               <div class="list-title pad30">
+                   <img src="images/bg_list_panda.png">
+                   <div class="description">
+                     <h4>父母，孩子人生路上的第一站明灯 父母，孩子人生路上的第一站明灯</h4>
+                     <h5>发布日期：2016/09/27</h5>   
+                   </div>
+                </div>
+           </div>
+       </div>
+     </div>
+     <div class="mt140"></div>
+    <footer>
+        <ul>
+           <li ><a href="index.html"><img src="images/footer/home.png"></a></li>
+            <li ><a href="rili.html"><img src="images/footer/calendaer.png"></a></li>
+            <li ><a href="message.html"><img src="images/footer/message.png"></a></li>
+            <li ><a href="kid.html"><img src="images/footer/baby.png"></a></li>
+            <li ><a href="user.html"><img src="images/footer/user.png"></a></li>
+        </ul>
+    </footer>
+    
+    <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        $(".no-payment-list").click(function(){
+           self.location='composition.html'; 
+        })
+    </script>
+</body>
+</html>

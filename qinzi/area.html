@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动端 选择城市插件</title>
+	<meta charset="utf-8" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="css/sm.css">
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		#city-picker {
+			display: block;
+			width: 200px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 18px;
+			background: #ff7f99;
+			border-radius: 10px;
+			margin: 20px;
+			border: none;			
+			padding-left:20px; 
+			color: #fff;
+			text-align: center;
+		}
+		.picker-items{
+            font-size:16px;
+            color:#323232;
+        }
+        .picker-modal{
+            background:#fff !important;
+            height:250px !important;
+        }
+        .button-link{
+            color:#323232 !important;
+        }
+        .col-province{
+            width:50% !important;
+        }
+        .col-city{
+            width:50% !important;
+        }
+        .col-district{
+            display:none;
+        }
+		::-webkit-input-placeholder { /* WebKit browsers */ 
+		color: #fff; 
+		} 
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+		color: #fff; 
+		} 
+		::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+		color: #fff; 
+		} 
+		:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+		color: #fff; 
+		} 
+	</style>
+</head>
+<body>
+<input type="text" placeholder="郑州"  id='city-picker'/>
+
+
+
+<script src="js/zepto.js"></script>
+<script src="js/sm1.js"></script>
+<script src="js/2.js"></script>
+<script>
+$("#city-picker").cityPicker({
+  formatValue: function (picker, value, displayValue){
+	console.log(displayValue);
+	return value[1];
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=0">
+	<title>亲子网站</title>
+	<!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">   
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/css.css">  
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=YcYT3uNlm5gomMRk8tunRvbQBzmWvGOH"></script>
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <div id="allmap"></div>
+    <header>
+      <div class="nav ">
+      	<a href="area.html" class="area">北京市</a>
+      	<div class="search">
+      	<!-- 	<p id="index_search_keyword" >
+      			请输入关键词
+      		</p> -->
+            <input id="index_search_keyword" type="text" name="" placeholder="请输入关键词">
+      		<span></span>
+      	</div>	
+      	<a href="login.html" class="login"><img src="images/login.png"></a>
+      </div>
+    </header>
+    <div id="main">
+        <!-- 轮播图 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                <img style="width:100%" src="images/banner-1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                <img style="width:100%" src="images/banner-2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                <img style="width:100%" src="images/banner-3.png" alt="">
+                </div>
+                 <div class="swiper-slide">
+                <img style="width:100%" src="images/banner-4.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                <img style="width:100%" src="images/banner-5.png" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- 分类 -->
+        <div class="fenlei ">
+        	<ul>
+        		<li><a href="rili.html"><img src="images/pc-calendar.png"></a></li>	
+        		<li><a href="camp.html"><img src="images/pc-camp.png"></a></li>	
+        		<li><a href="travel.html"><img src="images/pc-travel.png"></a></li>	
+        		<li><a href="college.html"><img src="images/pc-college.png"></a></li>	
+        		<li><a href="accommodation.html"><img src="images/pc-accommodation.png"></a></li>	
+        		<li><a href="ticket.html"><img src="images/pc-ticket.png"></a></li>	
+        		<li class="Hot"><a href="integral.html"><img src="images/pc-integral.png"> <span>Hot</span></a></li>	
+        		<li><a href="welfare.html"><img src="images/pc-activity.png"></a></li>	
+        	</ul>
+        </div>
+        <div class="mt20"></div>
+        <!-- 分类 -->
+        <div class="fenlei2">
+        	<ul>
+        		<li>
+        			<a href="kidology.html">
+        				<img src="images/fenlei-l.png">
+        				<div>
+        					<h4>生日派对定制</h4>
+        					<p>零距离童军更懂孩子</p>
+        				</div>
+        			</a>
+        		</li>	
+        		<li>
+        			<a href="kidology.html">
+        				<img src="images/fenlei-r.png">
+        				<div>
+        					<h4>儿童心理零距离</h4>
+        					<p>心里分析及案例</p>
+        				</div>
+        			</a>
+        		</li>	
+        	</ul>
+        </div>
+        <div class="mt20"></div>
+        <!-- 头条 -->
+        <div class="toutiao">
+            <h4>零距离头条:</h4>
+            <div class="swiper-container1">
+              <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    <p>1999元小长假旅游红包！等你领取！</p>
+                    </div>
+                    <div class="swiper-slide">
+                      <p>领880元新手红包，秋高去爽！</p>
+                    </div>
+                    <div class="swiper-slide">
+                    <p>1999元小长假旅游红包！等你领取2！</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div class="mt20"></div>
+        <!-- 专题 -->
+        <div class="zhuanti">
+            <div>
+            <a href="detail.html" class="activity">
+                 <img src="images/activity.png">
+                 <p class="apply_number">累计<span>48</span>人报名</p>
+                 <p class="apply_price">￥<span>68</span>元起</p>
+                 <h4 >[游园会]&nbsp;猜灯谜、做灯笼、尝糖画。48元起活动进行中。</h4>
+                 <p>兔子灯、水晶球、做灯笼、尝糖画等众多项目等你来</p>
+                 <ul><li>手工DIY</li><li>上海市</li><li>3-10岁</li></ul>
+            </a>
+            </div>
+        </div>
+        <div class="mt20"></div>
+        <!-- 景区门票 -->
+        <div class="scenic">
+            <div class="scenic_state ">
+                <img src="images/scenic.png">
+                <h4>景区门票直购</h4>
+                <h5>乐山乐水乐行丨便捷出行</h5>
+                <p><a href="ticket.html">查看全部</a></p>
+            </div>
+            <div class="swiper-container2">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="images/jingqu-1.png">
+                    <p>天山门景区</p>
+                    <p>￥<span>69</span>元</p>
+                  </div>
+                   <div class="swiper-slide">
+                    <img src="images/jingqu-2.png">
+                    <p>天山门景区</p>
+                    <p>￥<span>69</span>元</p>
+                  </div>
+                   <div class="swiper-slide">
+                    <img src="images/jingqu-3.png">
+                    <p>天山门景区</p>
+                    <p>￥<span>69</span>元</p>
+                  </div>
+                   <div class="swiper-slide">
+                    <img src="images/jingqu-4.png">
+                    <p>天山门景区</p>
+                    <p>￥<span>69</span>元</p>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/jingqu-1.png">
+                    <p>天山门景区</p>
+                    <p>￥<span>69</span>元</p>
+                  </div>
+                   <div class="swiper-slide">
+                    <img src="images/jingqu-2.png">
+                    <p>天山门景区</p>
+                    <p>￥<span>69</span>元</p>
+                  </div>
+                   <div class="swiper-slide">
+                    <img src="images/jingqu-3.png">
+                    <p>天山门景区</p>
+                    <p>￥<span>69</span>元</p>
+                  </div>
+                   <div class="swiper-slide">
+                    <img src="images/jingqu-4.png">
+                    <p>天山门景区</p>
+                    <p>￥<span>69</span>元</p>
+                  </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <!-- 酒店 -->
+        <div class="grogshop">
+            <div class="scenic_state ">
+                <img src="images/grogshop.png">
+                <h4>亲子酒店推荐</h4>
+                <h5>省力省心省钱丨每周更新</h5>
+                <p><a href="accommodation.html">查看全部</a></p>
+            </div>
+              <div class="swiper-container2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                   <img src="images/jingqu-5.png">
+                  <p>[北京]希尔顿大酒店</p>
+                  <p>￥<span>399</span>元起</p>
+                  </div>
+                   <div class="swiper-slide">
+                      <img src="images/jingqu-6.png">
+                    <p>[上海]如家快捷酒店</p>
+                    <p>￥<span>369</span>元起</p>
+                  </div>
+                   <div class="swiper-slide">
+                     <img src="images/jingqu-7.png">
+                    <p>[石家庄]喜来登大酒店</p>
+                    <p>￥<span>399</span>元起</p>
+                  </div>
+                   <div class="swiper-slide">
+                     <img src="images/jingqu-8.png">
+                      <p>[青岛]莫泰尔大酒店</p>
+                      <p>￥<span>369</span>元起</p>
+                  </div>
+                  <div class="swiper-slide">
+                   <img src="images/jingqu-5.png">
+                  <p>[北京]希尔顿大酒店</p>
+                  <p>￥<span>399</span>元起</p>
+                  </div>
+                   <div class="swiper-slide">
+                      <img src="images/jingqu-6.png">
+                    <p>[上海]如家快捷酒店</p>
+                    <p>￥<span>369</span>元起</p>
+                  </div>
+                   <div class="swiper-slide">
+                     <img src="images/jingqu-7.png">
+                    <p>[石家庄]喜来登大酒店</p>
+                    <p>￥<span>399</span>元起</p>
+                  </div>
+                   <div class="swiper-slide">
+                     <img src="images/jingqu-8.png">
+                      <p>[青岛]莫泰尔大酒店</p>
+                      <p>￥<span>369</span>元起</p>
+                  </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+
+        </div>
+        <div class="mt140"></div>
+     </div>
+    <footer>
+        <ul>
+            <li class="active"><a href="index.html"></a></li>
+            <li ><a href="rili.html"></a></li>
+            <li ><a href="message.html"></a></li>
+            <li ><a href="user.html"></a></li>
+        </ul>
+    </footer>
+    <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+     <script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
