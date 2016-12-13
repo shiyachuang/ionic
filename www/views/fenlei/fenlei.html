@@ -1,0 +1,104 @@
+<ion-view view-title="">
+  <ion-nav-buttons class="bar-stable bar bar-header item-input-inset " >
+    <!-- <a href="#" class="button button-stable" style="margin-right: 10px;font-size: 10px;">菠菜商城</a> -->
+      <label class="item-input-wrapper stable-bg search" style="margin-left: 40px;">
+
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="大家都在搜：华为P9" class="stable-bg" >
+    </label>
+    <a href="" id="search" class="button  button-stable">搜索</a>
+  </ion-nav-buttons>
+  
+  <div class="tabs tabs-top tabs-stable  has-header">
+    <a class="tab-item"  ng-click="show(1)" ng-class="{'blue':isOne}">手机</a>
+    <a class="tab-item " ng-click="show(2)" ng-class="{'blue':isTwo}">平板&穿戴</a>
+    <a class="tab-item"  ng-click="show(3)" ng-class="{'blue':isThree}">智能家居</a>
+    <a class="tab-item"  ng-click="show(4)" ng-class="{'blue':isFour}">配件</a>
+    <!-- <a class="tab-item"  ng-click="show(5)" ng-class="{'blue':isFive}" >配件</a> -->
+  </div>
+  <!--  <div class="bar subheader-bar has-header">
+
+        <div class="row text-center">
+            <div class="col two-level-nav" ng-click="show(1)" ng-class="{'blue':isOne}">手机</div>
+            <div class="col two-level-nav" ng-click="show(2)" ng-class="{'blue':isTwo}">平板</div>
+             <div class="col two-level-nav" ng-click="show(3)" ng-class="{'blue':isThree}">智能家居</div>
+            <div class="col two-level-nav" ng-click="show(4)" ng-class="{'blue':isFour}">手表</div>
+             <div class="col two-level-nav" ng-click="show(5)" ng-class="{'blue':isFive}">配件</div>
+        </div>
+    </div> -->
+  <ion-content class="scroll-content ionic-scroll overflow-scroll  has-header has-tabs"><div class="scroll">
+ 
+    <div class="content has-header">
+        <div ng-include="'1.html'" ng-if="tab==1" ></div>
+        <div ng-include="'2.html'" ng-if="tab==2"></div>
+        <div ng-include="'3.html'" ng-if="tab==3"></div>
+        <div ng-include="'4.html'" ng-if="tab==4"></div>
+        <div ng-include="'5.html'" ng-if="tab==5"></div>
+        <script type="text/ng-template" id="1.html">
+          <div class="row row-wrap " >
+            <a class="col col-33"  ng-click="listDetailsClick(list)" ng-repeat="list in lists">
+              <img ng-src="img/{{list.img}}">
+              <h5>{{list.name}}</h5>
+              <p class="assertive">¥ {{list.price}}</p>
+            </a>
+          </div>
+        </script>
+        <script type="text/ng-template" id="2.html">
+           <div class="row row-wrap  ">
+            <a class="col  col-50"  ng-click="listDetailsClick(list)" ng-repeat="list in Padlists">
+              <img ng-src="img/{{list.img}}">
+              <h5>{{list.name}}</h5>
+              <p class="assertive">¥ {{list.price}}</p>
+            </a>
+          </div>
+        </script>
+        <script type="text/ng-template" id="3.html">
+             <!-- <h2>智能家居</h2>            -->
+         <div class="row  row-wrap">
+          <a class="col col-50" ng-click="listDetailsClick(list)" ng-repeat="list in Routelists">
+            <img ng-src="img/{{list.img}}">
+            <h5>{{list.name}}</h5>
+            <p class="assertive">¥ {{list.price}}</p>
+          </a>
+         </div>
+
+        </script>
+        <!-- <script type="text/ng-template" id="4.html">
+        <div class="row row-wrap">
+           <a class="col  col-50"  href="#/list">
+            <img src="img/pad3.jpg">
+            <h5>华为手环 B3</h5>
+            <p class="assertive">¥ 1199</p>
+          </a>
+           <a class="col  col-50"  href="#/list">
+            <img src="img/pad4.jpg">
+            <h5>HUAWEI WATCH</h5>
+            <p class="assertive">¥ 3288</p>
+          </a>
+           <a class="col  col-50"  href="#/list">
+            <img src="img/pad3.jpg">
+            <h5>华为手环 B3</h5>
+            <p class="assertive">¥ 1199</p>
+          </a>
+           <a class="col  col-50"  href="#/list">
+            <img src="img/pad4.jpg">
+            <h5>HUAWEI WATCH</h5>
+            <p class="assertive">¥ 3288</p>
+          </a>
+           
+        </div>  
+        </script> -->
+        <script type="text/ng-template" id="4.html">
+             <!-- <h2>配件</h2>            -->
+           <div class="row row-wrap ">
+            <a class="col col-50"   ng-click="listDetailsClick(list)" ng-repeat="list in Peijianlists">
+              <img ng-src="img/{{list.img}}">
+              <h5>{{list.name}}</h5>
+              <p class="assertive">¥ {{list.price}}</p>
+            </a>
+          </div>
+        </script>
+    </div>
+</ion-view>
+</div>
+</ion-content>

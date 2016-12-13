@@ -1,0 +1,40 @@
+<ion-view view-title="分类" cache-view='false'>
+  <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-ios-search-strong" ng-click="showNewTopicModal()"></button>
+    </ion-nav-buttons>
+   <div class="bar bar-subheader">
+       <ion-scroll direction="x" scrollbar-x="false" >
+           <div class="button-bar sub_header_list" id="sub_header_list">
+               <a class="button button-clear sub_button_select" ng-click="changeTab(15,0)">教程</a>
+               <a class="button button-clear" ng-click="changeTab(1,1)">资讯</a>
+               <a class="button button-clear" ng-click="changeTab(27,2)">杂谈</a>
+               <a class="button button-clear" ng-click="changeTab(15,3)">互联网</a>
+           </div>
+       </ion-scroll>
+   </div>
+
+    <ion-content class="has-subheader">
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <div ng-if="showloading" style="margin-top:60px; text-align: center">
+
+            <ion-spinner icon="ios" style="height: 60px; width: 60px;;"></ion-spinner>
+        </div>
+
+
+        <ion-list class="topics_list"  ng-if="showloading==false">
+            <ion-item class="item-thumbnail-left" collection-repeat="topic in portalListData" href="#/tab/content1/{{topic.aid}}"
+                      collection-item-width="100%" collection-item-height="88px">
+                <img ng-if="topic.pic" ng-src="{{ENV.imgUrl}}{{topic.pic}}">
+                <img ng-if="!topic.pic" ng-src="img/ionic.png">
+                <h2>{{topic.title}}</h2>
+                <p class="summary">
+                </p>
+            </ion-item>
+        </ion-list>
+        <ion-infinite-scroll   on-infinite="loadMore()"  distance="1%" ng-if="hasNextPage()">        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

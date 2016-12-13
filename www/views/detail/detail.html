@@ -1,0 +1,78 @@
+<ion-view view-title="商品详情" cache-view='false' hide-tabs="true">
+  
+  <div class="tabs tabs-top tabs-stable  has-header">
+    <a class="tab-item"  ng-click="show(5)" id="info">基本信息</a>
+    <a class="tab-item " ng-click="show(6)" >图文详情</a>
+    <a class="tab-item"  ng-click="show(7)" >参数售后</a>
+    <a class="tab-item"  ng-click="show(8)" >评价</a>
+  </div>
+<ion-content>
+<div class="content has-header ">
+<div class="list scroll" ng-if="tab==5">
+   	<ion-slide-box auto-play="true"  >
+   		<ion-slide style="text-align: center;" ng-repeat="x in imgList">
+            <img ng-src="img/phone/{{x.img}}" style="height: 200px;">
+        </ion-slide>
+  	</ion-slide-box>
+	<div class="item ">
+		<h2>{{list.name}}</h2>
+		<p class="price">¥ {{list.price}}</p>
+		<!-- 基本信息 -->
+		<div>
+			<dl class="info">
+			<dt><label>数量:</label></dt>
+			<dd>
+			<label class="changesum"><b></b></label>
+			<label class="textbox"><input type="text" name="" value="1"></label>
+			<label class="changesum"><b style="background-position:right;"></b></label>
+			</dd>
+			</dl>
+			<dl class="info">
+			<dt><label>颜色:</label></dt>
+			<dd>
+			<a href=""><span>冰川白</span></a>
+			<a href="" class="selected"><span>海岛蓝</span></a>
+			<a href=""><span>日耀金</span></a>
+			</dd>
+			</dl>
+			<dl class="info">
+			<dt><label>制式:</label></dt>
+			<dd>
+			<a href="" class="selected"><span>全网通</span></a>
+			</dd>
+			</dl>
+			<dl class="info">
+			<dt><label >容量:</label></dt>
+			<dd>
+			<a href="" class="selected"><span>32GB</span></a>
+			</dd>
+			</dl>
+			<dl class="info">
+			<dt><label>套餐:</label></dt>
+			<dd>
+			<a href="" class="selected"><span>官方标配</span></a>
+			</dd>
+			</dl>
+		</div>
+	</div>
+	
+</div>  
+<div ng-if="tab==6">
+	<H2>{{list.Text}}</H2>
+</div>
+<div ng-if="tab==7">
+	 <h2>参数售后</h2>
+</div>
+<div ng-if="tab==8">
+	<h2>评价</h2>
+</div>
+<div style="height: 100px;"></div>	
+</div>
+</ion-content>
+<ion-footer-bar align-title="left" class="bar-assertive" ng-if="tab==5" ng-if="tab==6">
+	  <div class="footer padding">
+		<a href="">加入购物车</a>
+		<a href="" class="xiadan">立即下单</a>
+	</div>
+</ion-footer-bar>
+</ion-view>

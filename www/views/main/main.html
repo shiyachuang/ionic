@@ -1,0 +1,88 @@
+
+<ion-view view-title="菠菜商城" >
+  <ion-nav-title>
+                菠菜商城
+  </ion-nav-title>
+  <ion-content>
+  
+  <ion-slide-box does-continue="true" show-pager="true" auto-play="true" on-slide-changed="go_changed(index)"  active-slide="index" pager-click="go(index)">
+        <ion-slide>
+            <img src="img/banner1.png" style="height: 158px;width: ">
+        </ion-slide>
+        <ion-slide>
+            <img src="img/banner2.jpg" style="height: 158px;width: ">
+        </ion-slide>
+        <ion-slide>
+            <img src="img/banner3.png" style="height: 158px;width: ">
+        </ion-slide>
+        <ion-slide>
+            <img src="img/banner4.png" style="height: 158px;width: ">
+        </ion-slide>
+  </ion-slide-box>
+  <div class="row stable-bg news">
+        <a class="col  " href="#">
+          <img src="img/news1.jpg">
+        </a>
+        <a class="col" href="#">
+          <img src="img/news2.jpg">
+        </a>
+  </div>
+  <div class="list-card list-borderless">
+     <div class="item item-divider ">
+       手机
+     </div>
+    <div class="row row-wrap " >
+      <a class="col col-33"  ng-repeat="list in lists" ng-click="  listDetailsClick(list)">  
+        <img ng-src="img/{{list.img}}">
+        <h5>{{list.name}}</h5>
+        <p class="assertive">¥ {{list.price}}</p>
+      </a>
+    </div>
+  <!-- 平板 -->
+   <div class="item item-divider">
+       －平板&穿戴－
+      </div>
+      <div class="row row-wrap  ">
+        <a class="col  col-50"  ng-click="listDetailsClick(list)" ng-repeat="list in Padlists">
+          <img ng-src="img/{{list.img}}">
+          <h5>{{list.name}}</h5>
+          <p class="assertive">¥ {{list.price}}</p>
+        </a>
+      </div>
+<!-- 智能家居 -->
+    <div class="item item-divider">
+       －智能家居－
+      </div>
+      <div class="row  row-wrap">
+        <a class="col col-50" ng-click="listDetailsClick(list)" ng-repeat="list in Routelists">
+          <img ng-src="img/{{list.img}}">
+          <h5>{{list.name}}</h5>
+          <p class="assertive">¥ {{list.price}}</p>
+        </a>
+      
+      </div>
+  <!-- 配件专区 -->
+       <div class="item item-divider">
+       －配件专区－
+      </div>
+      <div class="row row-wrap ">
+        <a class="col col-50"  ng-click="listDetailsClick(list)" ng-repeat="list in Peijianlists">
+          <img ng-src="img/{{list.img}}">
+          <h5>{{list.name}}</h5>
+          <p class="assertive">¥ {{list.price}}</p>
+        </a>
+      </div>
+  </div>
+  <div class="stable-bg" >
+    <section id="bottom-area" class="bottom-area">
+  <p class="touch"> 
+    <a href="#"  > 触屏版</a>
+    <a href="javascript:;" > 电脑版</a>
+    <a href="/app/download" class="active"> 客户端</a>
+  </p>
+  
+  <p class="copyright"><span>Copyright © 2011-2018</span></p>
+</section>
+  </div>
+  </ion-content>
+</ion-view>

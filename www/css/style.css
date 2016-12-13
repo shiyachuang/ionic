@@ -1,0 +1,187 @@
+/* Empty. Add your own CSS if you like */
+
+body {
+    /*font-family: "Microsoft YaHei", 微软雅黑, STHeiti, "WenQuanYi Micro Hei", SimSun, sans-serif;*/
+    font-family: Arial,Helvetica,sans-serif,'Lucida Grande',Verdana;
+    word-wrap: break-word;
+    line-height: 1;
+    min-width: 320px;
+    background-color: #f7f7f7;
+    max-width: 720px;
+    margin: 0 auto;
+    color: #333;
+}
+img{max-width: 100%;}
+.item-divider,.row .col{text-align: center;}
+.row .col p{text-align: center;color: #e42012}
+
+.item-divider{    
+	font-size: 13px;
+	color: #888;
+}
+.row .col-33 img{
+	width: 80px;
+}
+.row .col-50 img{
+	max-width: 100px;
+	height: auto;
+}
+.news,.news a{padding-bottom:  0;}
+#bottom-area{text-align: center;color: #888;}
+.bottom-area p.copyright span{
+	font-size: 12px;
+    line-height: 1.5;
+}
+#bottom-area .touch{margin:0;padding-top: 10px;}
+#bottom-area .touch a{
+	padding: 0 .75em;
+    line-height: 1;
+    display: inline-block;
+    border-right: 1px solid #888;
+	color: #888;font-size: 13.5px;text-decoration: none;
+}
+#bottom-area p.touch a:last-child{border-right:none;}
+#bottom-area .touch a.active{
+	color: #ca151e;
+}
+.user{padding: 10px;text-align: center;
+	background: url(../img/memberbg.jpg) no-repeat center ;
+
+}
+.user p{color: #fff;font-size: 12px;margin-top: 10px;}
+.item-icon-left .icon, .item-icon-right .icon{font-size: 24px;}
+.orderList{text-align: center;}
+.orderList a{text-decoration: none;position: relative; color: #333;}
+.orderList a img{width: 20px;}
+.orderList a i{position: absolute;top: 0;right: 35px;font-size: 12px; width: 20px;height:20px;line-height:18px;text-align: center; border-radius: 50%; background-color: #e42012;color: #fff; }
+
+
+.blue{
+    color:#0c60ee;
+}
+a{text-decoration: none;}
+.row-wrap  a{border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;}
+.row-wrap {padding: 0;}
+.red{
+    color:#e01d20;
+    border-bottom: 1px solid #e01d20;
+}
+.search input{height: 25px;}
+.info{
+    display: table;
+}
+.info dt,.info dd{
+    display: table-cell;
+    position: relative;
+}
+.info dd label{
+    display: inline-block;
+    position: relative;
+    top: .6em;
+}
+p.price{   
+    margin-top: 10px;
+    font-size: 14.5px; 
+    color: #e42012;
+}
+.info dt{
+    width: 44px;
+    font-size: 13px;
+}
+.info dd label b{
+    display: inline-block;
+    width: 36px;height: 36px;
+    background: url(../img/icon53.png) no-repeat;
+    background-size: 200% 100%;
+    cursor: pointer;
+    font-size: .5em;
+}
+.info dl label{
+    position: relative;
+    top: .2em;
+}
+.textbox,.info dd a{
+    width: 67px;
+    text-align: center;
+    margin-right: .15em;
+    margin-bottom: 0;
+    position: relative;
+    top: .6em;
+    height: 35px;
+    line-height:35px;
+    border-radius: .5em;
+    border: 1px solid #b2b2b2;
+    display: inline-block;
+    background-color: #fff;
+    color: #333;
+}
+.info dd a{
+    top: 0;
+    font-size: 13.2px;
+}
+.textbox input{
+    border: 0 none;
+    width: 80%;
+    height: 94%;
+    line-height: 94%;
+    font-size: .65em;
+    color: #333;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    vertical-align: middle;
+    position: absolute;
+    top: 1px;
+    left: 10%;
+}
+.info dd a.selected {
+    border-color: #f03f01;
+    background-color: #fef5f2;
+}
+.footer{
+    background: #fff;
+    z-index: 100;
+    display: -webkit-flex;
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+
+}
+.footer a{
+    flex: 1;
+    text-align: center;
+    background-color: #f17f00;
+    border: 1px solid #d75e0c;
+    color: #fff;
+    padding: 0 .7em;
+    height: 44px;
+    line-height: 40px;
+    border-radius: .5em;
+    text-align: center;
+    min-width: 2.05em;
+    margin: 0 10px;
+}
+.footer a.xiadan{
+    background-color: #ca151e;
+    border: 1px solid #cc0a0d;
+}
+
+
+/*二级菜单*/
+.bar .sub_header_list .button.button-clear{
+
+    border-bottom: 1px solid #eee;
+}
+
+.sub_header_list .button{
+    width: 20%;
+    color:#666;
+}
+.bar .sub_header_list .button.sub_button_select{
+    border-bottom:2px solid #387ef5;
+    position:relative;
+}
+.bar-subheader{
+    border-bottom: none;
+}

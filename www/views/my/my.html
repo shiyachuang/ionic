@@ -1,0 +1,70 @@
+<ion-view view-title="用户中心">
+ 
+  <ion-content >
+   	 <ion-list>
+           <!--  <ion-item class="login"  ng-click="login()" ng-if="!userInfo" href="#/tab/login">
+
+                <img src="img/commentfailure.png" class="avatar">
+                <br>
+                <br>
+
+                <p ng-if="!userInfo">立即登录</p>
+                <ion-spinner icon="ripple" ng-if="processing"></ion-spinner>
+            </ion-item>
+ -->
+            <ion-item class="item-avatar item-icon-right"  href="#/tab/user/personal">
+                <img ng-src="img/commentfailure.png" reset-img>
+                <h2>BC5565</h2>
+                <p>积分：0</p>
+                <!-- <i class="icon ion-ios-arrow-right"></i> -->
+                <i class="icon ion-ios-arrow-right"></i>
+            </ion-item>
+        </ion-list>
+  	<div class="row orderList">
+  		<a href="#" class="col "><img src="img/ico_pay.png"><br>待支付 
+  		<i >5</i></a>
+  		<a href="#" class="col"><img src="img/ico_pingjia.png"><br>待收货
+  		<i>2</i>	
+  		</a>	
+  		<a href="#" class="col"><img src="img/ico_shouhuo.png"><br>待评价
+  		<i>12</i>
+  		</a>	
+  	</div>
+  	<div class="list">
+		<a class="item item-icon-left item-icon-right" href="#/tab/changepassword">
+		<i class="icon ion-ios-list-outline"></i>
+		我的订单
+		<i class="icon ion-ios-arrow-right"></i>
+		</a>
+
+	<!-- 	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-ios-cart-outline"></i>
+		我的购物车
+		 <i class="icon ion-ios-arrow-right"></i>
+		</a>
+		 -->
+	
+		<a class="item item-icon-left item-icon-right" href="#/tab/changepersonalinfo">
+		<i class="icon ion-ios-compose-outline"></i>
+		修改收货地址
+		<i class="icon ion-ios-arrow-right"></i>
+		</a>
+
+		<a class="item item-icon-left " >
+		<i class="icon ion-ios-chatbubble-outline"></i>
+		意见反馈
+		<span class="item-note">
+          Email:602166865@qq.com
+        </span>
+		</a>
+		<a class="item item-icon-left " >
+		<i class="icon ion-ios-heart-outline"></i>
+		关于菠菜商城
+            <span class="item-note">
+              2016.11.11
+            </span>
+		</a>
+
+	</div>
+  </ion-content>
+</ion-view>
